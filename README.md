@@ -15,5 +15,31 @@ Students need an engaging, adaptable, and intelligent platform where they can le
 - Immediate feedback helps students identify and work on weak areas faster.
 - A unified platform reduces the need for multiple disconnected learning tools.
 
-**Our Goal**
+**Our Goal:**
 To build a platform that offers two distinct learning modes — conversational AI avatar tutoring & reading curated articles/publications — followed by AI-assisted assessments that work both online and via uploaded paper exam photos, giving instant feedback and analytics.
+
+# Project Documentation <hr>
+
+## 1. Problem Definition
+
+Traditional e-learning platforms often lack personalization, engagement, and flexibility.
+Students have different learning preferences — some want interactive conversation, while others prefer reading structured material.
+Assessment systems are mostly either fully online or offline, creating a gap in hybrid evaluation.
+
+#### Key Gaps:
+- No single platform that combines personalized AI tutoring + content reading.
+- Lack of hybrid exam evaluation (both online and offline paper grading).
+- Delayed or no feedback on paper-based exams.
+- Limited adaptability to student preferences.
+
+## 2. Objective
+
+1. Build a dual-mode learning platform where students can:
+- Learn by interacting with a customizable AI avatar.
+- Learn by reading curated articles/publications.
+
+2. Enable practice and assessments through:
+- Online exams (MCQ & short answer, auto-graded).
+- Offline paper exams (photo upload → OCR → auto-grading).
+
+3. Provide instant feedback and performance analytics.
