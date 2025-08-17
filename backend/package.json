@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Ai Techer",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohsinansari0705/GrayCode-TutorLink.git"
+  },
+  "author": "Anup pradhan (Mors)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohsinansari0705/GrayCode-TutorLink/issues"
+  },
+  "homepage": "https://github.com/mohsinansari0705/GrayCode-TutorLink#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.1",
+    "nodemon": "^3.1.10"
+  }
+}
