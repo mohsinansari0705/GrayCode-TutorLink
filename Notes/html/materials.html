@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational AI Platform - Design System Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color System */
+            --primary-blue: #2563EB;
+            --primary-blue-light: #3B82F6;
+            --primary-blue-dark: #1E40AF;
+            
+            --accent-gradient-start: #9333EA;
+            --accent-gradient-end: #EC4899;
+            --accent-glow: rgba(147, 51, 234, 0.2);
+            
+            --background-primary: #FFFFFF;
+            --background-secondary: #F9FAFB;
+            --background-tertiary: #F3F4F6;
+            
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            
+            --border-light: #E5E7EB;
+            --border-medium: #D1D5DB;
+            --border-dark: #9CA3AF;
+            
+            --success: #10B981;
+            --success-light: #D1FAE5;
+            --warning: #F59E0B;
+            --warning-light: #FEF3C7;
+            --error: #EF4444;
+            --error-light: #FEE2E2;
+            --info: #3B82F6;
+            --info-light: #DBEAFE;
+            
+            /* Spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+            
+            --text-xs: 12px;
+            --text-sm: 14px;
+            --text-base: 16px;
+            --text-lg: 18px;
+            --text-xl: 20px;
+            --text-2xl: 24px;
+            --text-3xl: 30px;
+            --text-4xl: 36px;
+            
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-standard: 200ms ease;
+            --transition-slow: 300ms ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.5;
+            color: var(--text-primary);
+            background-color: var(--background-secondary);
+            padding: var(--space-md);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: var(--space-2xl);
+            padding: var(--space-xl);
+            background-color: var(--background-primary);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: var(--font-semibold);
+            margin-bottom: var(--space-md);
+        }
+        
+        h1 {
+            font-size: var(--text-4xl);
+            color: var(--primary-blue);
+        }
+        
+        h2 {
+            font-size: var(--text-3xl);
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+        }
+        
+        /* Navigation Demo */
+        .nav-demo {
+            background-color: var(--background-primary);
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 var(--space-lg);
+            border-bottom: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: var(--font-bold);
+            color: var(--primary-blue);
+            font-size: var(--text-xl);
+        }
+        
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-bold);
+        }
+        
+        /* Button Demo */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: var(--font-semibold);
+            transition: all var(--transition-standard);
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+        }
+        
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-gradient-start));
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--background-primary);
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-medium);
+        }
+        
+        .btn-ghost:hover {
+            background: var(--background-tertiary);
+            color: var(--text-primary);
+        }
+        
+        /* Card Demo */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .card {
+            background: var(--background-primary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: var(--space-lg);
+            transition: all var(--transition-standard);
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+            color: white;
+        }
+        
+        /* Color Demo */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .color-item {
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .color-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .color-accent {
+            background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+            color: white;
+        }
+        
+        .color-success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .color-warning {
+            background-color: var(--warning);
+            color: white;
+        }
+        
+        .color-error {
+            background-color: var(--error);
+            color: white;
+        }
+        
+        /* Typography Demo */
+        .type-scale {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .type-item h1, .type-item h2, .type-item h3, .type-item h4, .type-item p {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .type-meta {
+            color: var(--text-tertiary);
+            font-size: var(--text-sm);
+            font-family: var(--font-code);
+        }
+        
+        /* AI Effects Demo */
+        .ai-effects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+            justify-content: space-around;
+        }
+        
+        .ai-glow {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            box-shadow: 0 0 20px var(--accent-glow);
+            animation: pulse 2s infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+        }
+        
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--text-secondary);
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(147, 51, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .button-grid, .card-grid, .color-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: var(--text-3xl);
+            }
+            
+            h2 {
+                font-size: var(--text-2xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Educational AI Platform Design System</h1>
+            <p>A comprehensive visual language for our educational AI platform that builds trust through clean design while showcasing innovation.</p>
+        </header>
+        
+        <!-- Navigation Demo -->
+        <section>
+            <h2>Navigation</h2>
+            <div class="nav-demo">
+                <div class="logo">EduAI</div>
+                <div class="user-menu">
+                    <span>Welcome, Student</span>
+                    <div class="avatar">JS</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Color System Demo -->
+        <section>
+            <h2>Color System</h2>
+            <div class="color-grid">
+                <div>
+                    <div class="color-item color-primary">Primary Blue<br>#2563EB</div>
+                    <div class="color-item" style="background-color: var(--primary-blue-light); color: white;">Primary Light<br>#3B82F6</div>
+                    <div class="color-item" style="background-color: var(--primary-blue-dark); color: white;">Primary Dark<br>#1E40AF</div>
+                </div>
+                <div>
+                    <div class="color-item color-accent">Accent Gradient<br>#9333EA to #EC4899</div>
+                    <div class="color-item color-success">Success<br>#10B981</div>
+                    <div class="color-item color-warning">Warning<br>#F59E0B</div>
+                    <div class="color-item color-error">Error<br>#EF4444</div>
+                </div>
+                <div>
+                    <div class="color-item" style="background-color: var(--background-primary);">Background Primary<br>#FFFFFF</div>
+                    <div class="color-item" style="background-color: var(--background-secondary);">Background Secondary<br>#F9FAFB</div>
+                    <div class="color-item" style="background-color: var(--background-tertiary);">Background Tertiary<br>#F3F4F6</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Typography Demo -->
+        <section>
+            <h2>Typography</h2>
+            <div class="type-scale">
+                <div class="type-item">
+                    <h1>Montserrat Heading 1</h1>
+                    <p class="type-meta">36px / 40px • --text-4xl • Semibold (600)</p>
+                </div>
+                <div class="type-item">
+                    <h2>Montserrat Heading 2</h2>
+                    <p class="type-meta">30px / 36px • --text-3xl • Semibold (600)</p>
+                </div>
+                <div class="type-item">
+                    <h3>Montserrat Heading 3</h3>
+                    <p class="type-meta">24px / 32px • --text-2xl • Semibold (600)</p>
+                </div>
+                <div class="type-item">
+                    <p>Inter Body Text: The quick brown fox jumps over the lazy dog. This is the standard body text used for most content.</p>
+                    <p class="type-meta">16px / 24px • --text-base • Regular (400)</p>
+                </div>
+                <div class="type-item">
+                    <p style="color: var(--text-secondary);">Secondary Text: Additional information that complements the primary content.</p>
+                    <p class="type-meta">#6B7280 • --text-secondary</p>
+                </div>
+                <div class="type-item">
+                    <code style="font-family: var(--font-code); background: var(--background-tertiary); padding: var(--space-xs); border-radius: var(--radius-sm);">Code Snippet: const example = "JetBrains Mono";</code>
+                    <p class="type-meta">JetBrains Mono • Monospace</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Button Demo -->
+        <section>
+            <h2>Buttons</h2>
+            <div class="button-grid">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-ghost">Ghost Button</button>
+                <button class="btn" disabled>Disabled Button</button>
+            </div>
+        </section>
+        
+        <!-- Card Demo -->
+        <section>
+            <h2>Cards</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">AI</div>
+                    <h3>Machine Learning</h3>
+                    <p>Explore the fundamentals of machine learning algorithms and their applications in real-world scenarios.</p>
+                    <button class="btn btn-primary" style="margin-top: var(--space-md);">Start Learning</button>
+                </div>
+                <div class="card">
+                    <div class="card-icon">DS</div>
+                    <h3>Data Science</h3>
+                    <p>Learn how to extract insights from data using statistical methods and visualization techniques.</p>
+                    <button class="btn btn-secondary" style="margin-top: var(--space-md);">View Course</button>
+                </div>
+                <div class="card">
+                    <div class="card-icon">NL</div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Understand how AI systems process and generate human language for various applications.</p>
+                    <button class="btn btn-ghost" style="margin-top: var(--space-md);">Explore</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AI Effects Demo -->
+        <section>
+            <h2>AI-Specific Effects</h2>
+            <div class="ai-effects">
+                <div>
+                    <h3>AI Glow Effect</h3>
+                    <div class="ai-glow"></div>
+                </div>
+                <div>
+                    <h3>Gradient Text</h3>
+                    <div class="gradient-text">Intelligent Learning System</div>
+                </div>
+                <div>
+                    <h3>Typing Indicator</h3>
+                    <div class="typing-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Simple hover effect demonstration
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-1px)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
