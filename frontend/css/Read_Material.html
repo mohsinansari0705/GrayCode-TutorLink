@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Teacher - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* Import Design System Variables */
+    :root {
+      --primary-blue: #2563EB;
+      --primary-blue-light: #3B82F6;
+      --primary-blue-dark: #1E40AF;
+      --accent-gradient-start: #9333EA;
+      --accent-gradient-end: #EC4899;
+      --background-primary: #FFFFFF;
+      --background-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --border-light: #E5E7EB;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+      --text-base: 16px;
+      --text-2xl: 24px;
+      --text-3xl: 30px;
+      --text-4xl: 36px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: var(--background-secondary);
+      line-height: 1.5;
+      
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: var(--space-lg); }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--background-primary);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      margin-bottom: var(--space-xl);
+      margin-left: 0%;
+      
+    }
+
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary-blue);
+      font-size: var(--text-2xl);
+      
+    }
+    .ul1{
+         display: flex;
+        margin-left: 0%;
+        padding-left: 50%;
+        padding-right: 6%;
+        float:left;
+        align-items: left;
+        justify-content: left;
+        
+    }
+    .li1{
+        display: flex;
+        margin: 0%;
+        padding-left: 10%;
+        color:black;
+        float: left;
+        align-items: right;
+        justify-content: right;
+        
+    }
+
+    .li1:hover{
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gradient-start));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+       background-clip: text;
+       color: transparent; 
+      }
+
+    .sub div{
+        border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+        color: var(--primary-blue-light);
+        text-decoration: solid;
+         font-size: large;
+         margin-right: 12.5%;
+         margin-left: 12.5%;
+         padding-bottom: 1%;
+         padding-top: 1%;
+         padding-left: 2%;
+        
+    }
+
+    .sub a{
+        color:black;
+    }
+
+    .sub a:hover{
+        color:#6B7280;
+    }
+   .a1{
+    background-color:#eeeff1;
+}
+
+.a2{
+    background-color:#F9FAFB;
+}
+
+ </style>
+
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">EduAI Platform</div>
+      <ul class="ul1">
+      <li class="li1"><a href="aiteach_index.html">Home</a></li>
+      <li class="li1"><a href="Dashboard.html">Dashboard</a></li>
+    </ul>
+</nav>
+</div>
+
+<section class="sub">
+    <div class="a1">
+    <h2>C Language</h2>
+    <a href="Sub_Read_1.html">Link 1</a>
+    </div>
+
+    <div class="a2">
+        <h2>C++</h2>
+        <a href="#">Link 2</a>
+    </div>
+
+    <div class="a1">
+        <h2>Data Structure Algorithms(Basics)</h2>
+        <a href="#">Link 3</a>
+    </div>
+
+    <div class="a2">
+        <h2>Data Structure Algorithms(Advanced)</h2>
+        <a href="#">Link 4</a>
+    </div>
+
+    <div class="a1">
+        <h2>Java</h2>
+        <a href="#">Link 5</a>
+    </div>
+
+     <div class="a2">
+        <h2>Python</h2>
+        <a href="#">Link 6</a>
+    </div>
+
+    </section>
+        
+</body>
+</html>

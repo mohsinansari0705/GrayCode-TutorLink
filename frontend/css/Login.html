@@ -1,0 +1,144 @@
+<style>
+header{
+  color:#007bff;
+  --font-heading: 'Montserrat', sans-serif;
+}
+/* Container */
+.login-container {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #222;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Extra options (remember + forgot) */
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.form-extra a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+}
+.form-extra a:hover {
+  text-decoration: underline;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+}
+
+/* Bottom text */
+.signup-text {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #555;
+  text-align: center;
+}
+
+.signup-text a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<header>
+  <h1>EduAI Platform</h1>
+</header>
+<section class="login-container">
+  <h2>Welcome Back!</h2>
+  <form class="login-form">
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <!-- Remember me + Forgot password -->
+    <div class="form-extra">
+      <label>
+        <input type="checkbox" name="remember"> Remember Me
+      </label>
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn-gradient">Log In</button>
+
+    <!-- No account yet -->
+    <p class="signup-text">Don’t have an account? <a href="Signup.html">Sign Up</a></p>
+  </form>
+</section>
+

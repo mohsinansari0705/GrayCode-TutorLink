@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Teacher - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* Import Design System Variables */
+    :root {
+      --primary-blue: #2563EB;
+      --primary-blue-light: #3B82F6;
+      --primary-blue-dark: #1E40AF;
+      --accent-gradient-start: #9333EA;
+      --accent-gradient-end: #EC4899;
+      --background-primary: #FFFFFF;
+      --background-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --border-light: #E5E7EB;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+      --text-base: 16px;
+      --text-2xl: 24px;
+      --text-3xl: 30px;
+      --text-4xl: 36px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: var(--background-secondary);
+      line-height: 1.5;
+      
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: var(--space-lg); }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--background-primary);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      margin-bottom: var(--space-xl);
+    }
+
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary-blue);
+      font-size: var(--text-2xl);
+    }
+    .ul1{
+         display: flex;
+        margin-left: 0%;
+        padding-left: 50%;
+        padding-right: 0%;
+        float:left;
+        align-items: left;
+        justify-content: left;
+        
+    }
+    .li1{
+        display: flex;
+        margin: 0%;
+        padding-left: 98%;
+        color:black;
+        float: left;
+        align-items: right;
+        justify-content: right;
+        
+    }
+
+    .li1:hover{
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gradient-start));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+       background-clip: text;
+       color: transparent; 
+      }
+
+    select{
+      color: black;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: var(--space-xl);
+      background: var(--background-primary);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-xl);
+    }
+    .hero h1 {
+      color: var(--primary-blue);
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);background-clip: text;
+      margin-bottom: var(--space-md);
+    }
+    .hero p {
+      color: var(--text-secondary);
+      font-size: var(--text-base);
+      max-width: 700px;
+      margin: 0 auto var(--space-lg);
+    }
+    .btn-primary {
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gradient-start));
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-lg);
+    }
+    .card {
+       background: var(--background-primary);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      text-align: center;
+      transition: 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); }
+
+    .card h3 {
+
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+     --accent-gradient-start: #9333EA;
+      --accent-gradient-end: #EC4899;
+      background: linear-gradient(50deg, var(--accent-gradient-start), var(--accent-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+      margin-bottom: var(--space-md);
+    }
+    .card p { color: var(--text-secondary); }
+
+    
+    .s2{
+      display: flex;
+      background-color: var(--background-primary);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      margin-top: 3%;
+      padding-left: 2%;
+      padding-top: 5%;
+     padding-bottom: 2%;
+    }
+
+    .s2 h1{
+      color:var(--primary-blue);
+    }
+
+    .s2 ul{
+      color: var(--text-secondary);
+      padding-left: 4%;
+      padding-bottom: 2%;
+     
+    }
+
+    .s2 img{
+      border-radius: 10%;
+      display:flex;
+      height:100%;
+      width:90%;
+      padding-bottom:2%;
+      margin-bottom: 2%;
+      padding-left: 20%;
+    }
+    /* Footer */
+    
+    footer {
+      display: flex;
+      text-align: left;
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-top: var(--space-xl);
+      padding-left: 2%;
+      justify-content: space-between;
+    }
+
+     .footer-section h2{
+        color:var(--primary-blue);
+    }
+
+    .p1 a:hover{
+      color:var(--primary-blue-light);
+    }
+
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">EduAI Platform</div>
+      <ul class="ul1">
+      <li class="li1"><a href="aiteach_index.html">Home</a></li>
+    </ul>
+    <select id="options" onchange="redirectToPage(this)">
+  <option value="">-- Select Option --</option>
+  <option value="Login.html" >LogIn</option>
+  <option value="Signup.html">SignUp</option>
+</select>
+
+<script>
+function redirectToPage(select) {
+  const url = select.value;
+  if (url) {
+    window.location.href = url; // redirect
+  }
+}
+</script>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Your Personal AI Teacher</h1>
+      <p>Learn smarter with interactive materials, take AI-powered exams, track your performance, and get taught by your favourite teacher’s AI avatar.</p>
+      <a href="Signup.html"><button class="btn-primary">Get Started</button></a>
+    </section>
+
+     
+
+    <!-- Features Section -->
+    <section class="s1">
+      <div class="features">
+        <div class="card">
+          📘<h3> Learning Materials</h3>
+          <p>Access curated notes, tutorials, and resources tailored to your learning path.</p>
+        </div>
+        <div class="card">
+          📝<h3> Exams & Quizzes</h3>
+          <p>Practice with AI-generated exams and quizzes designed to strengthen your knowledge.</p>
+        </div>
+        <div class="card">
+         📊 <h3>Performance Evaluation</h3>
+          <p>Track your progress with smart analytics and personalized feedback.</p>
+        </div>
+        <div class="card">
+          👩‍🏫 <h3> AI Avatars</h3>
+          <p>Learn from interactive AI avatars that resemble your favourite teacher.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--uniqueness-->
+    <section class="s2">
+      <div class="s2_div">
+      <h1>How EduAI Differ from other Learning Platforms?</h1><br>
+      <ul>
+        <li>Learning materials including notes and videos.</li>
+        <li>Large number of courses available.</li>
+        <li>Lectures taught by customised AI Avatars developing the classroom environment</li>
+        <li>Take live assessments</li>
+        <li>Growth analysis with assessments</li>
+      </ul>
+      </div>
+      <div>
+      <img src="C:\Users\codin\Downloads\AI_IMAGE.png" alt="ai_img">
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+            <footer>
+                <div class="footer-section">
+                    <h2>EduAI Platform</h2>
+                    <h4>Contact Us</h4>
+                    <p>call:+123 567 896<br>
+                       Email: example@mail.com
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <p class="p1"><a href="aiteach_index.html">Home</a><br><a href="Read_Material.html">courses</p>
+                </div>
+                <div class="footer-section subscribe-section">
+                    <h4>Subscribe</h4>
+                    <p>Subscribe for the furthur Updates!</p>
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe Now</button>
+                     <p>© 2025 EduAI. Built with ❤️ at Hackathon.</p>
+                </div>
+     
+    </footer>
+    </div>
+    </body>
+    </html>
